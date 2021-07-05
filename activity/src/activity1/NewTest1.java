@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
@@ -32,14 +33,15 @@ public class NewTest1
   @BeforeTest
   public void beforeTest()
   {
-	  System.setProperty("webdriver.chrome.driver","D:\\\\\\\\chrome\\\\\\\\chromedriver.exe" );
-	  d=new ChromeDriver();
+	  System.setProperty("webdriver.gecko.driver","D:\\\\firefox\\\\geckodriver.exe" );
+	  d=new FirefoxDriver();
 	  d.get("https://www.audi.in/in/web/en.html");
   }
 
   @AfterTest
   public void afterTest() 
   {
+	  d.close();
   }
 
 }

@@ -6,8 +6,10 @@
       <class name="activity1.NewTest">
         <methods>
           <include name="afterTest"/>
+          <include name="t"/>
           <include name="beforeTest"/>
           <include name="f1"/>
+          <include name="t1"/>
         </methods>
       </class> <!-- activity1.NewTest -->
     </classes>
